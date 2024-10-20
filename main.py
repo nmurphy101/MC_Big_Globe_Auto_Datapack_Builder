@@ -30,7 +30,7 @@ def main(jar_filename):
     # INITIAL MOD UNPACKING SECTION AND SETUP
     # Open the JAR file and extract all files and subdirectories
     jar_directory_filename = jar_filename.rstrip(".jar")
-    with zipfile.ZipFile(jar_filename, 'r') as jar:
+    with zipfile.ZipFile(f"./mods/{jar_filename}", 'r') as jar:
         jar.extractall(jar_directory_filename)
 
     # Check if a fabric.mod.json file exists in the jar_directory_filename directory
@@ -246,7 +246,7 @@ def main(jar_filename):
 
 if __name__ == "__main__":
     # get all the .jar files in the current directory
-    jar_files = [f for f in os.listdir() if f.endswith(".jar")]
+    jar_files = [f for f in os.listdir("./mods") if f.endswith(".jar")]
 
     # Make a datapack for each mod
     for jar_filename in jar_files:

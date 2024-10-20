@@ -47,7 +47,7 @@ jobs:
 
       - name: Run PyInstaller and zip
         run: |
-          python -m PyInstaller -onefile main.spec
+          python -m PyInstaller main.spec
           Compress-Archive -Path dist/main/* -Destination bg_datapack_builder.zip
       - uses: actions/upload-artifact@v4
         with:
