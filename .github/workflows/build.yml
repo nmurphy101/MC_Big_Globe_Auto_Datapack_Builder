@@ -49,7 +49,7 @@ jobs:
         run: |
           python -m PyInstaller main.spec
           Compress-Archive -Path dist/main/* -Destination bg_datapack_builder.zip
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name: bg_datapack_builder_${{ needs.main.outputs.tag_name }}.zip
           path: dist/main.zip
@@ -88,7 +88,7 @@ jobs:
         run: |
           python -m PyInstaller main.spec
           zip -vr  bg_datapack_builder_mac.zip dist/main
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           name:  bg_datapack_builder_mac_${{ needs.main.outputs.tag_name }}.zip
           path: dist/main.zip
