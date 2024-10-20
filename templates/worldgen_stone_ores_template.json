@@ -1,0 +1,30 @@
+{
+	"type": "bigglobe:ore",
+	"config": {
+		"seed": "{ORE_NAME}",
+		"blocks": {
+                        "minecraft:stone":             "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:cobblestone":       "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:andesite":          "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:polished_andesite": "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:diorite":           "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:polished_diorite":  "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:granite":           "{MOD_NAME}:{ORE_NAME}",
+			"minecraft:polished_granite":  "{MOD_NAME}:{ORE_NAME}"
+		},
+		"chance": {
+			"template": "bigglobe:ores/exponential",
+			"inputs": {
+				"delay": "256.0L",
+				"peak":  "0.75L",
+				"limit": "0.0L"
+			}
+		},
+		"radius": {
+			"type": "average",
+			"min": 2.5,
+			"max": 8.0,
+			"average": 3.5
+		}
+	}
+}
